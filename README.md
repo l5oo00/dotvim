@@ -17,7 +17,12 @@ brew install cmake
 npm i -g fecs
 ```
 - 打开vim，自动安装插件， `vi`
-- 进入.vim/bundle/YouCompleteMe目录,编译 `./install.py --clang-completer`
+- 进入.vim/bundle/YouCompleteMe目录
+```bash
+git submodule update --init --recursive
+./install.py --clang-completer
+```
+> _貌似还好_
 > clang 下载比较慢， 可以先去[这里](http://releases.llvm.org/download.html)用迅雷下载好对应的版本
 > 放到 `.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives` 目录下
 
